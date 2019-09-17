@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>portfolio design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      body {
+        overflow: scroll;
+      }
+
+      .works .filtering .filter {
+        display: inline-block;
+        padding: 2px 10px;
+      }
+
+      .works .filtering span {
+        background: #ebeaef;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 5px;
+        padding: 15px 20px;
+        transition: all 0.3s ease 0s;
+      }
+
+      .works .filtering span:hover {
+        background: #045468;
+        color: #fff;
+      }
+
+      .works .filtering .active {
+        background: #045468;
+        box-shadow: 0px 8px 30px -5px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+
+      .works .gallery {
+        margin-bottom: -0.05em;
+      }
+
+      .works .larg-padding {
+        padding: 0 15px;
+      }
+
+      .works .larg-padding .item-img {
+        border: 10px solid #fff;
+        margin-top: 30px;
+      }
+
+      .works .no-padding {
+        padding: 0;
+      }
+
+      .works .no-padding .item-img {
+        margin-top: 0;
+      }
+
+      .works .gutter {
+        padding: 0 10px;
+      }
+
+      .works .gutter .item-img {
+        margin-top: 20px;
+      }
+
+      .works .item-img {
+        margin-top: 30px;
+        position: relative;
+      }
+
+      .works .item-img:hover .item-img-overlay {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+
+      .works .item-img-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        padding: 30px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        transform: scale(0, 0);
+        transition: all 0.5s;
+      }
+
+      .works .item-img-overlay .icon {
+        bottom: 30px;
+        color: #eee;
+        font-size: 30px;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        right: 30px;
+        text-align: center;
+        width: 30px;
+      }
+
+      .works .item-img-overlay p {
+        color: #f2f2f2;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      .works .item-img-overlay h3 {
+        color: #fff;
+        margin: 0;
+        font-size: 25px;
+        line-height: 1.3;
+        font-weight: 500;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        display: inline-block;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+
+      .navbar {
+         padding: .8rem;
+         background: #045468;
+
+
+    }
+        .navbar-nav li {
+            padding-left: 10px;
+            
+            
+      }
+        .nav-link {
+            font-size: 1.5em !important;
+            color: #fff;
+        }
+
+        @media (min-width: 375px) {
+            .works .filtering span {
+                margin: 5px 2px;
+                padding: 1px 9px;
+            }
+        }
+
+        @media (min-width: 320px) {
+            .works .filtering span {
+                margin: 5px 7px;
+                padding: 1px 9px;
+            }
+        }
+
+       
+
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- NAV-->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                </div>
+                </nav>
+
+
+    <section class="works section-padding bg-gray" data-scroll-index="3">
+      <div class="container-fluid">
+        <br /><br />
+        <div class="row">
+          <!-- filter links -->
+          <div class="filtering text-center mb-30 col-sm-12">
+            <div class="filter">
+              <span data-filter="*" class="active">All</span>
+              <span data-filter=".academy">Manchester Club Academy</span>
+              <span data-filter=".swan">The Swan with Two Necks</span>
+              <span data-filter=".mruFC">Macclesfield Rugby Union FC</span>
+              <span data-filter=".MBF">Macclesfield Beer Festival</span>
+              <span data-filter=".DI">Death Institute</span>
+              <span data-filter=".GU">Gamers Unite Dive NQ</span>
+              <span data-filter=".gullivers">Gullivers NQ</span>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <br /><br /><br />
+          <!-- gallery -->
+          <div class="gallery full-width">
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding gullivers">
+              <div class="item-img">
+                <img src="img/gul1.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>House Of Wolvxs</p>
+                    <h3>Gullivers NQ // Manchester // 14.04.19</h3>
+                    <a href="img/gul1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding gullivers">
+              <div class="item-img">
+                <img src="img/gul2.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>House Of Wolvxs</p>
+                    <h3>Gullivers NQ // Manchester // 14.04.19</h3>
+                    <a href="img/gul2.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding swan">
+              <div class="item-img">
+                <img src="img/swan1.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Ak And The +47's</p>
+                    <h3>The Swan With Two Necks // Macclesfield // 07.01.17</h3>
+                    <a href="img/swan1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding swan">
+                    <div class="item-img">
+                      <img src="img/swanCollege.jpg" alt="image" class="img-responsive" />
+                      <div class="item-img-overlay">
+                        <div class="overlay-info full-width">
+                          <p>College Band</p>
+                          <h3>Macclesfield College Event // The Swan With Two Necks // Macclesfield // 07.01.17</h3>
+                          <a href="img/swanCollege.jpg" class="popimg">
+                            <span class="icon"
+                              ><i class="fa fa-search-plus"></i
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding swan">
+              <div class="item-img">
+                <img src="img/swan3.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Ak And The +47's</p>
+                    <h3>The Swan With Two Necks // Macclesfield // 07.01.17</h3>
+                    <a href="img/swan3.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding swan">
+              <div class="item-img">
+                <img src="img/swan2.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Ak And The +47's</p>
+                    <h3>The Swan With Two Necks // Macclesfield // 07.01.17</h3>
+                    <a href="img/swan2.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding academy">
+              <div class="item-img">
+                <img src="img/acad1.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>SOLDATO</p>
+                    <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                    <a href="img/acad1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding academy">
+              <div class="item-img">
+                <img src="img/acad2.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>SOLDATO</p>
+                    <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                    <a href="img/acad2.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- gallery item -->
+            <div class="col-lg-4 col-md-6 items no-padding academy">
+              <div class="item-img">
+                <img src="img/acad3.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Peur</p>
+                    <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                    <a href="img/acad3.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding academy">
+                    <div class="item-img">
+                      <img src="img/acadLL1.jpg" alt="image" class="img-responsive" />
+                      <div class="item-img-overlay">
+                        <div class="overlay-info full-width">
+                          <p>LOWLIVES</p>
+                          <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                          <a href="img/acadLL1.jpg" class="popimg">
+                            <span class="icon"
+                              ><i class="fa fa-search-plus"></i
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 items no-padding academy">
+                        <div class="item-img">
+                          <img src="img/acadLL2.jpg" alt="image" class="img-responsive" />
+                          <div class="item-img-overlay">
+                            <div class="overlay-info full-width">
+                              <p>LOWLIVES</p>
+                              <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                              <a href="img/acadLL2.jpg" class="popimg">
+                                <span class="icon"
+                                  ><i class="fa fa-search-plus"></i
+                                ></span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-6 items no-padding academy">
+                            <div class="item-img">
+                              <img src="img/acadLL3.jpg" alt="image" class="img-responsive" />
+                              <div class="item-img-overlay">
+                                <div class="overlay-info full-width">
+                                  <p>LOWLIVES</p>
+                                  <h3>Manchester Club Academy // Manchester // 10.02.18</h3>
+                                  <a href="img/acadLL3.jpg" class="popimg">
+                                    <span class="icon"
+                                      ><i class="fa fa-search-plus"></i
+                                    ></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFC1.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Macclesfield Rugby Union FC</p>
+                    <h3>
+                      The Chinese Marbles // Macclesfield Beer Festival //
+                      Macclesfield // 12.05.18
+                    </h3>
+                    <a href="img/mruFC1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFC3.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Rugby Union // Macclesfield Beer Festival //
+                      Macclesfield // 12.05.18
+                    </h3>
+                    <a href="img/mruFC3.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFC4.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Rugby Union // Macclesfield Beer Festival //
+                      Macclesfield // 12.05.18
+                    </h3>
+                    <a href="img/mruFC3.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFC5.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Rugby Union // Macclesfield Beer Festival //
+                      Macclesfield // 12.05.18
+                    </h3>
+                    <a href="img/mruFC5.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFC6DR.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Dandelion Rose</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFC6DR.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFC9DR.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Dandelion Rose</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFC9DR.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFC10DR.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Dandelion Rose</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFC10DR.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFCTF1.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>The Farm</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCTF1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFCTFB1.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>The Brand New Heavies</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCTFB1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFCD1.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Dodgy</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCD1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img src="img/mruFCD2.jpg" alt="image" class="img-responsive" />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Dodgy</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCD2.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFCSB1.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Simon Bartholomew // The Brand New Heavies</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCSB1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding mruFC">
+              <div class="item-img">
+                <img
+                  src="img/mruFCPH1.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Peter Hooton</p>
+                    <h3>
+                      Macclesfield Festival // Macclesfield // 22.07.2017
+                    </h3>
+                    <a href="img/mruFCPH1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding MBF">
+              <div class="item-img">
+                <img
+                  src="img/mruFCMH1.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Beer Festival // Macclesfield // 06.05.17
+                    </h3>
+                    <a href="img/mruFCMH1.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding MBF">
+              <div class="item-img">
+                <img
+                  src="img/mruFCMH2.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Beer Festival // Macclesfield // 06.05.17
+                    </h3>
+                    <a href="img/mruFCMH2.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding MBF">
+              <div class="item-img">
+                <img
+                  src="img/mruFCMH3.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Beer Festival // Macclesfield // 06.05.17
+                    </h3>
+                    <a href="img/mruFCMH3.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding MBF">
+              <div class="item-img">
+                <img
+                  src="img/mruFCMH4.jpg"
+                  alt="image"
+                  class="img-responsive"
+                />
+                <div class="item-img-overlay">
+                  <div class="overlay-info full-width">
+                    <p>Monkey Harris</p>
+                    <h3>
+                      Macclesfield Beer Festival // Macclesfield // 06.05.17
+                    </h3>
+                    <a href="img/mruFCMH4.jpg" class="popimg">
+                      <span class="icon"
+                        ><i class="fa fa-search-plus"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 items no-padding DI">
+                    <div class="item-img">
+                      <img
+                        src="img/DIWSF1.jpg"
+                        alt="image"
+                        class="img-responsive"
+                      />
+                      <div class="item-img-overlay">
+                        <div class="overlay-info full-width">
+                          <p>We Signal Fire</p>
+                          <h3>
+                            Death Institute // Manchester // 14.10.17
+                          </h3>
+                          <a href="img/DIWSF1.jpg" class="popimg">
+                            <span class="icon"
+                              ><i class="fa fa-search-plus"></i
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 items no-padding DI">
+                        <div class="item-img">
+                          <img
+                            src="img/DIWSF2.jpg"
+                            alt="image"
+                            class="img-responsive"
+                          />
+                          <div class="item-img-overlay">
+                            <div class="overlay-info full-width">
+                              <p>We Signal Fire</p>
+                              <h3>
+                                Death Institute // Manchester // 14.10.17
+                              </h3>
+                              <a href="img/DIWSF2.jpg" class="popimg">
+                                <span class="icon"
+                                  ><i class="fa fa-search-plus"></i
+                                ></span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-6 items no-padding DI">
+                            <div class="item-img">
+                              <img
+                                src="img/DIWSF3.jpg"
+                                alt="image"
+                                class="img-responsive"
+                              />
+                              <div class="item-img-overlay">
+                                <div class="overlay-info full-width">
+                                  <p>We Signal Fire</p>
+                                  <h3>
+                                    Death Institute // Manchester // 14.10.17
+                                  </h3>
+                                  <a href="img/DIWSF3.jpg" class="popimg">
+                                    <span class="icon"
+                                      ><i class="fa fa-search-plus"></i
+                                    ></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 items no-padding DI">
+                                <div class="item-img">
+                                  <img
+                                    src="img/DIWSF4.jpg"
+                                    alt="image"
+                                    class="img-responsive"
+                                  />
+                                  <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                      <p>We Signal Fire</p>
+                                      <h3>
+                                        Death Institute // Manchester // 14.10.17
+                                      </h3>
+                                      <a href="img/DIWSF4.jpg" class="popimg">
+                                        <span class="icon"
+                                          ><i class="fa fa-search-plus"></i
+                                        ></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-6 items no-padding DI">
+                                    <div class="item-img">
+                                      <img
+                                        src="img/DIOX1.jpg"
+                                        alt="image"
+                                        class="img-responsive"
+                                      />
+                                      <div class="item-img-overlay">
+                                        <div class="overlay-info full-width">
+                                          <p>Oxbloods</p>
+                                          <h3>
+                                            Death Institute // Manchester // 14.10.17
+                                          </h3>
+                                          <a href="img/DIOX1.jpg" class="popimg">
+                                            <span class="icon"
+                                              ><i class="fa fa-search-plus"></i
+                                            ></span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 items no-padding DI">
+                                        <div class="item-img">
+                                          <img
+                                            src="img/DIAEA1.jpg"
+                                            alt="image"
+                                            class="img-responsive"
+                                          />
+                                          <div class="item-img-overlay">
+                                            <div class="overlay-info full-width">
+                                              <p>All Ears Avow</p>
+                                              <h3>
+                                                Death Institute // Manchester // 14.10.17
+                                              </h3>
+                                              <a href="img/DIOX1.jpg" class="popimg">
+                                                <span class="icon"
+                                                  ><i class="fa fa-search-plus"></i
+                                                ></span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-lg-4 col-md-6 items no-padding GU">
+                                            <div class="item-img">
+                                              <img
+                                                src="img/gamersUnite1.jpg"
+                                                alt="image"
+                                                class="img-responsive"
+                                              />
+                                              <div class="item-img-overlay">
+                                                <div class="overlay-info full-width">
+                                                  <p>Gamers Unite</p>
+                                                  <h3>
+                                                    Dive NQ // Manchester // 08.08.17
+                                                  </h3>
+                                                  <a href="img/gamersUnite1.jpg" class="popimg">
+                                                    <span class="icon"
+                                                      ><i class="fa fa-search-plus"></i
+                                                    ></span>
+                                                  </a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-lg-4 col-md-6 items no-padding GU">
+                                                <div class="item-img">
+                                                  <img
+                                                    src="img/gamersUnite2.jpg"
+                                                    alt="image"
+                                                    class="img-responsive"
+                                                  />
+                                                  <div class="item-img-overlay">
+                                                    <div class="overlay-info full-width">
+                                                      <p>Gamers Unite</p>
+                                                      <h3>
+                                                        Dive NQ // Manchester // 08.08.17
+                                                      </h3>
+                                                      <a href="img/gamersUnite2.jpg" class="popimg">
+                                                        <span class="icon"
+                                                          ><i class="fa fa-search-plus"></i
+                                                        ></span>
+                                                      </a>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                        
+
+
+            <!-- gallery item -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(function() {
+        $(".gallery").magnificPopup({
+          delegate: ".popimg",
+          type: "image",
+          gallery: {
+            enabled: true
+          }
+        });
+        $(".gallery").isotope({
+          // options
+          itemSelector: ".items"
+        });
+
+        var $gallery = $(".gallery").isotope({
+          // options
+        });
+
+        // filter items on button click
+        $(".filtering").on("click", "span", function() {
+          var filterValue = $(this).attr("data-filter");
+
+          $gallery.isotope({ filter: filterValue });
+        });
+
+        $(".filtering").on("click", "span", function() {
+          $(this)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
